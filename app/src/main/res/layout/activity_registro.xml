@@ -7,6 +7,20 @@
     android:background="#3C3F41"
     tools:context=".Login">
 
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Correo"
+        android:textColor="#C3BCBC"
+        android:textColorHint="#D8CECE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="334dp"
@@ -27,40 +41,43 @@
         android:id="@+id/editTextText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="43dp"
-        android:layout_marginEnd="111dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="17dp"
         android:ems="10"
-        android:hint="Usuario"
         android:inputType="text"
+        android:text="Usuario"
         android:textColor="#C3BCBC"
         android:textColorHint="#D8CECE"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/editTextTextPassword2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="112dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="101dp"
         android:ems="10"
-        android:hint="Contraseña"
         android:inputType="textPassword"
+        android:text="Contraseña"
         android:textColor="#C3BCBC"
-        android:textColorHint="#BFBFBF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
 
-    <Button
-        android:id="@+id/button"
+    <EditText
+        android:id="@+id/editTextTextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="139dp"
-        android:backgroundTint="#3F51B5"
-        android:text="Iniciar sesión"
-        android:textColorHighlight="#3F51B5"
-        android:textColorLink="#3F51B5"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="Contraseña"
+        android:textColor="#C3BCBC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
 
@@ -68,11 +85,11 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="62dp"
+        android:layout_marginTop="51dp"
         android:layout_marginEnd="141dp"
         android:backgroundTint="#03A9F4"
         android:text="Crear cuenta"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
