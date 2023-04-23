@@ -14,8 +14,8 @@
         android:layout_marginTop="17dp"
         android:layout_marginEnd="101dp"
         android:ems="10"
+        android:hint="Correo"
         android:inputType="text"
-        android:text="Correo"
         android:textColor="#C3BCBC"
         android:textColorHint="#D8CECE"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,8 +46,8 @@
         android:layout_marginEnd="101dp"
         android:layout_marginBottom="17dp"
         android:ems="10"
+        android:hint="Usuario"
         android:inputType="text"
-        android:text="Usuario"
         android:textColor="#C3BCBC"
         android:textColorHint="#D8CECE"
         app:layout_constraintBottom_toTopOf="@+id/editTextText2"
@@ -62,9 +62,10 @@
         android:layout_marginTop="18dp"
         android:layout_marginEnd="101dp"
         android:ems="10"
+        android:hint="Contraseña"
         android:inputType="textPassword"
-        android:text="Contraseña"
         android:textColor="#C3BCBC"
+        android:textColorHint="#D8CECE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
 
@@ -75,9 +76,10 @@
         android:layout_marginTop="18dp"
         android:layout_marginEnd="101dp"
         android:ems="10"
+        android:hint="Repite contraseña"
         android:inputType="textPassword"
-        android:text="Contraseña"
         android:textColor="#C3BCBC"
+        android:textColorHint="#D8CECE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
 
