@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3C3F41"
+    android:background="#252930"
     tools:context=".Login">
 
     <ImageView
@@ -52,11 +52,11 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/boton_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="139dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="140dp"
         android:backgroundTint="#3F51B5"
         android:text="Iniciar sesión"
         android:textColorHighlight="#3F51B5"
@@ -65,14 +65,14 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/boton_sign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="141dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="140dp"
         android:backgroundTint="#03A9F4"
         android:text="Crear cuenta"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/boton_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
