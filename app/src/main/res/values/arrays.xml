@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="image_array">
+        <item>@drawable/j1</item>
+        <item>@drawable/j2</item>
+        <item>@drawable/j3</item>
+        <item>@drawable/j4</item>
+        <item>@drawable/j5</item>
+        <item>@drawable/j6</item>
+        <item>@drawable/j7</item>
+        <item>@drawable/j8</item>
+        <item>@drawable/j9</item>
+        <item>@drawable/j10</item>
+        <item>@drawable/j11</item>
+        <item>@drawable/j12</item>
+        <item>@drawable/j13</item>
+        <item>@drawable/j14</item>
+        <item>@drawable/j15</item>
+        <item>@drawable/j16</item>
+        <item>@drawable/j17</item>
+        <item>@drawable/j18</item>
+        <item>@drawable/j19</item>
+        <item>@drawable/j20</item>
+        <item>@drawable/j21</item>
+
+
+
+        <!-- Agrega aquí más recursos de imágenes -->
+    </array>
+
+</resources>
