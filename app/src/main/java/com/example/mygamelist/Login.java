@@ -50,29 +50,29 @@ public class Login extends AppCompatActivity {
 
             //metodo para viajar al menu principal
             public void onClick(View v) {
-                //try {
-                 //   CADMyGameList cad = new CADMyGameList();
+                try {
+                    CADMyGameList cad = new CADMyGameList();
 
 
-                 //   Usuario usuario = null;
+                    Usuario usuario = null;
 
 
-                 //   EditText loginusuario = (EditText) findViewById(R.id.usuarioLogin);
-                 //   EditText logincontraseña = (EditText) findViewById(R.id.usuarioLogin);
-                 //   usuario = cad.login(loginusuario.getText().toString(), logincontraseña.getText().toString());
+                    EditText loginusuario = (EditText) findViewById(R.id.usuarioLogin);
+                    EditText logincontraseña = (EditText) findViewById(R.id.usuarioLogin);
+                    usuario = cad.login(loginusuario.getText().toString(), logincontraseña.getText().toString());
 
-                //    if(usuario != null){
+                    if(usuario != null){
                         // Crear un objeto Intent para la actividad de destino
                         Intent intent = new Intent(Login.this, MenuPrincipal.class);
 
                         // Iniciar la actividad de destino
                         startActivity(intent);
-                //    }
+                    }
 
-              //  } catch (ExcepcionMyGameList | SQLException e) {
-               //     Toast.makeText(getApplicationContext(), "Usuario no encontrado", Toast.LENGTH_SHORT).show();
-              //      throw new RuntimeException(e);
-              //  }
+                } catch (ExcepcionMyGameList | SQLException e) {
+                    Toast.makeText(getApplicationContext(), "Usuario no encontrado", Toast.LENGTH_SHORT).show();
+                  throw new RuntimeException(e);
+               }
 
             }
         });
