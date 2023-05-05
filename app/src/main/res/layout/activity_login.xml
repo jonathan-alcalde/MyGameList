@@ -24,7 +24,7 @@
         app:srcCompat="@drawable/logo_y_titulo_removebg_preview" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/usuarioLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="43dp"
@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/contraseñaLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="39dp"
@@ -49,7 +49,7 @@
         android:textColor="#C3BCBC"
         android:textColorHint="#BFBFBF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/usuarioLogin" />
 
     <Button
         android:id="@+id/boton_login"
@@ -62,7 +62,7 @@
         android:textColorHighlight="#3F51B5"
         android:textColorLink="#3F51B5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/contraseñaLogin" />
 
     <Button
         android:id="@+id/boton_sign"

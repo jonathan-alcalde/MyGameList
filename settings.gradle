@@ -14,3 +14,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "MyGameList"
 include ':app'
+include ':mylibrary'
