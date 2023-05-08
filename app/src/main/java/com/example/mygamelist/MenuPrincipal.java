@@ -2,12 +2,14 @@ package com.example.mygamelist;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 
@@ -31,7 +33,41 @@ public class MenuPrincipal extends AppCompatActivity {
 
         adapter = new ImageAdapter();
         gridView.setAdapter(adapter);
+
+        //Boton en navegacion para menu principal
+        Button BotonMenuPrincipal = findViewById(R.id.menuPrincipal);
+        BotonMenuPrincipal.setOnClickListener(new View.OnClickListener() {
+
+            //metodo para viajar al registro
+            public void onClick(View v) {
+
+                // Crear un objeto Intent para la actividad de destino
+                Intent intent = new Intent(MenuPrincipal.this, MenuPrincipal.class);
+
+                // Iniciar la actividad de destino
+                startActivity(intent);
+            }
+        });
+
+        //Boton en navegacion para lista personal
+        Button miLista = findViewById(R.id.miLista);
+        miLista.setOnClickListener(new View.OnClickListener() {
+
+            //metodo para viajar al registro
+            public void onClick(View v) {
+
+                // Crear un objeto Intent para la actividad de destino
+                Intent intent = new Intent(MenuPrincipal.this, ListaPersonal.class);
+
+                // Iniciar la actividad de destino
+                startActivity(intent);
+            }
+        });
+
+
+
     }
+
 
     class ImageAdapter extends BaseAdapter {
 
