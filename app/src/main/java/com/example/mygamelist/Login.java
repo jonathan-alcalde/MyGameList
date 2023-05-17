@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import java.sql.SQLException;
 
 import java.sql.SQLException;
@@ -58,6 +60,7 @@ public class Login extends AppCompatActivity {
             //metodo para viajar al menu principal
             public void onClick(View v) {
                 new GetRecordInfoTask().execute();
+                System.out.println("Entro en el hilo mundo!");
                 //try {
                 //    CADMyGameList cad = new CADMyGameList();
 
@@ -70,13 +73,13 @@ public class Login extends AppCompatActivity {
                 //    System.out.println("logincontraseña: " + logincontraseña);
                 //    usuario = cad.login(loginusuario.getText().toString(), logincontraseña.getText().toString());
                 //    System.out.println("los datos del usuario son: " + loginusuario);
-                //   if(usuario != null){
+                   //if(usuario != null){
                          //Crear un objeto Intent para la actividad de destino
-                //        Intent intent = new Intent(Login.this, MenuPrincipal.class);
+                   //     Intent intent = new Intent(Login.this, MenuPrincipal.class);
 
                          //Iniciar la actividad de destino
-                //        startActivity(intent);
-                //    }
+                   //     startActivity(intent);
+                   // }
 
                 //} catch (ExcepcionMyGameList | SQLException e) {
                 //    Toast.makeText(getApplicationContext(), "Usuario no encontrado", Toast.LENGTH_SHORT).show();
@@ -100,14 +103,32 @@ public class Login extends AppCompatActivity {
 
             Usuario u1 = new Usuario();
 
-            u1.setNombre("ejemplo1");
-            u1.setContrasena("aaaa");
+            EditText loginusuario = (EditText) findViewById(R.id.usuarioLogin);
+            EditText logincontraseña = (EditText) findViewById(R.id.contraseñaLogin);
 
-            try { cad.login(u1.getNombre(),u1.getContrasena()); }
+           try {
+               u1.setNombre(loginusuario.getText().toString());
+               u1.setContrasena(logincontraseña.getText().toString());
+              u1 =  cad.login(u1.getNombre(),u1.getContrasena()); }
+
             catch (ExcepcionMyGameList e) { e.printStackTrace(); }
             catch (SQLException e) { e.printStackTrace(); }
 
+            if(u1 != null){
+                System.out.println("usuario logeado correctamente" + u1.getNombre());
+                //Crear un objeto Intent para la actividad de destino
+                Intent intent = new Intent(Login.this, MenuPrincipal.class);
+
+                //Iniciar la actividad de destino
+                startActivity(intent);
+            }else {
+                System.out.println("usuario incorrecto");
+                //Toast.makeText(Login.this, "Usuario incorrecto", Toast.LENGTH_SHORT).show();
+                Snackbar.make()
+            }
             return recordInfo;
+
+
 
         }
         @Override
