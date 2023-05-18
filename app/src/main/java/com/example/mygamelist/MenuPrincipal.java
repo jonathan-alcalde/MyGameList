@@ -44,6 +44,8 @@ public class MenuPrincipal extends AppCompatActivity {
                 // Crear un objeto Intent para la actividad de destino
                 Intent intent = new Intent(MenuPrincipal.this, MenuPrincipal.class);
 
+
+
                 // Iniciar la actividad de destino
                 startActivity(intent);
             }

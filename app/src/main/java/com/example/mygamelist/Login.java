@@ -25,16 +25,12 @@ import pojosmygamelist.Usuario;
 
 public class Login extends AppCompatActivity {
 
-    RelativeLayout layout;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        layout = (RelativeLayout) findViewById(R.id.activity_login);
+
 
         Button botonRegistrar = findViewById(R.id.boton_sign);
         Button botonLogin = findViewById(R.id.boton_login);
@@ -108,7 +104,7 @@ public class Login extends AppCompatActivity {
            try {
                u1.setNombre(loginusuario.getText().toString());
                u1.setContrasena(logincontraseña.getText().toString());
-              u1 =  cad.login(u1.getNombre(),u1.getContrasena()); }
+               u1 =  cad.login(u1.getNombre(),u1.getContrasena()); }
 
             catch (ExcepcionMyGameList e) { e.printStackTrace(); }
             catch (SQLException e) { e.printStackTrace(); }
@@ -118,6 +114,7 @@ public class Login extends AppCompatActivity {
                 if (u1.getIdRol() == 1){
                     //Crear un objeto Intent para la actividad de destino
                     Intent intent = new Intent(Login.this, MenuPrincipal.class);
+                    intent.putExtra("id", u1.getId());
                     startActivity(intent);
                     //Iniciar la actividad de destino    
                 } else if (u1.getIdRol() == 3) {
@@ -133,7 +130,7 @@ public class Login extends AppCompatActivity {
                 //Toast.makeText(Login.this, "Usuario incorrecto", Toast.LENGTH_SHORT).show();
                 Snackbar.make(
                         findViewById(R.id.activity_login),
-                        "Usuario no encontrado,por favor, registrate",
+                        "Usuario incorrecto, revisa los datos o registrate",
                         BaseTransientBottomBar.LENGTH_SHORT
                 ).show();
             }

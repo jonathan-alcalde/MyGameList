@@ -88,7 +88,7 @@
 
                 <!-- Título del Drawer -->
                 <TextView
-                    android:id="@+id/drawer_title"
+                    android:id="@+id/usuario_logeado"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
