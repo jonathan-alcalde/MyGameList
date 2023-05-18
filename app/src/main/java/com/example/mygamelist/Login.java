@@ -1,18 +1,17 @@
 package com.example.mygamelist;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.RelativeLayout;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
-
-import java.sql.SQLException;
 
 import java.sql.SQLException;
 
@@ -26,7 +25,7 @@ import pojosmygamelist.Usuario;
 
 public class Login extends AppCompatActivity {
 
-
+    RelativeLayout layout;
 
 
 
@@ -35,7 +34,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
+        layout = (RelativeLayout) findViewById(R.id.activity_login);
 
         Button botonRegistrar = findViewById(R.id.boton_sign);
         Button botonLogin = findViewById(R.id.boton_login);
@@ -116,15 +115,27 @@ public class Login extends AppCompatActivity {
 
             if(u1 != null){
                 System.out.println("usuario logeado correctamente" + u1.getNombre());
-                //Crear un objeto Intent para la actividad de destino
-                Intent intent = new Intent(Login.this, MenuPrincipal.class);
+                if (u1.getIdRol() == 1){
+                    //Crear un objeto Intent para la actividad de destino
+                    Intent intent = new Intent(Login.this, MenuPrincipal.class);
+                    startActivity(intent);
+                    //Iniciar la actividad de destino    
+                } else if (u1.getIdRol() == 3) {
+                    //Crear un objeto Intent para la actividad de destino
+                    Intent intent = new Intent(Login.this, MenuAdmin.class);
+                    startActivity(intent);
+                    //Iniciar la actividad de destino
+                }
 
-                //Iniciar la actividad de destino
-                startActivity(intent);
+
             }else {
                 System.out.println("usuario incorrecto");
                 //Toast.makeText(Login.this, "Usuario incorrecto", Toast.LENGTH_SHORT).show();
-                Snackbar.make()
+                Snackbar.make(
+                        findViewById(R.id.activity_login),
+                        "Usuario no encontrado,por favor, registrate",
+                        BaseTransientBottomBar.LENGTH_SHORT
+                ).show();
             }
             return recordInfo;
 
