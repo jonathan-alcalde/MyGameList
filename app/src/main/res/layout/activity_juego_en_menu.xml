@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252930"
+    tools:context=".JuegoEnMenu">
+
+    <ImageView
+        android:id="@+id/imagenJuego"
+        android:layout_width="150dp"
+        android:layout_height="204dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nombreJuego"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="56dp"
+        android:text="Hollow Knight"
+        android:textColor="#D8CECE"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/imagenJuego"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/desarrolladoraJuego"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="34dp"
+        android:text="Desarrollado por: Team Cherry"
+        android:textColor="#D8CECE"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imagenJuego"
+        app:layout_constraintTop_toBottomOf="@+id/nombreJuego" />
+
+    <TextView
+        android:id="@+id/descripcionJuego"
+        android:layout_width="344dp"
+        android:layout_height="161dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="¡Forja tu propio camino en Hollow Knight! Una aventura épica a través de un vasto reino de insectos y héroes que se encuentra en ruinas. Explora cavernas tortuosas, combate contra criaturas corrompidas y entabla amistad con extraños insectos, todo en un estilo clásico en 2D dibujado a mano. "
+        android:textColor="#D8CECE"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagenJuego" />
+
+    <TextView
+        android:id="@+id/generos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Generos:"
+        android:textColor="#D8CECE"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descripcionJuego" />
+
+    <TextView
+        android:id="@+id/generoJuego"
+        android:layout_width="357dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:text="Metroidvania, 2D, Soylslike, indie, Un jugador..."
+        android:textColor="#D8CECE"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/generos" />
+
+    <TextView
+        android:id="@+id/plataformas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="21dp"
+        android:text="Plataformas:"
+        android:textColor="#D8CECE"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/generoJuego" />
+
+    <TextView
+        android:id="@+id/plataformaJuego"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="7dp"
+        android:text="PC, Xbox, Play Station, Switch"
+        android:textColor="#D8CECE"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plataformas" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:buttonTint="@color/white"
+        android:text="Añadir a la lista"
+        android:textColor="#D8CECE"
+        android:textColorHint="#D8CECE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plataformaJuego" />
+</androidx.constraintlayout.widget.ConstraintLayout>

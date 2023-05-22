@@ -17,6 +17,9 @@
         android:theme="@style/Theme.MyGameList"
         tools:targetApi="31">
         <activity
+            android:name=".JuegoEnMenu"
+            android:exported="false" />
+        <activity
             android:name=".MenuAdmin"
             android:exported="false" />
         <activity
