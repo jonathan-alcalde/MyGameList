@@ -42,13 +42,15 @@
 
     <TextView
         android:id="@+id/descripcionJuego"
-        android:layout_width="344dp"
-        android:layout_height="161dp"
+        android:layout_width="343dp"
+        android:layout_height="179dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
         android:text="¡Forja tu propio camino en Hollow Knight! Una aventura épica a través de un vasto reino de insectos y héroes que se encuentra en ruinas. Explora cavernas tortuosas, combate contra criaturas corrompidas y entabla amistad con extraños insectos, todo en un estilo clásico en 2D dibujado a mano. "
         android:textColor="#D8CECE"
         android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/generos"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagenJuego" />
 
@@ -105,7 +107,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="36dp"
         android:buttonTint="@color/white"
         android:text="Añadir a la lista"
         android:textColor="#D8CECE"

@@ -12,6 +12,7 @@
         android:id="@+id/registro_correo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
         android:layout_marginTop="17dp"
         android:layout_marginEnd="101dp"
         android:ems="10"
@@ -20,6 +21,7 @@
         android:textColor="#C3BCBC"
         android:textColorHint="#D8CECE"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registro_usuario" />
 
     <ImageView
@@ -53,7 +55,6 @@
         android:textColorHint="#D8CECE"
         app:layout_constraintBottom_toTopOf="@+id/registro_correo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -61,6 +62,7 @@
         android:id="@+id/registro_contraseña"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="101dp"
         android:ems="10"
@@ -69,12 +71,14 @@
         android:textColor="#C3BCBC"
         android:textColorHint="#D8CECE"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registro_correo" />
 
     <EditText
         android:id="@+id/registro_contraseña_repetir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="101dp"
         android:ems="10"
@@ -83,19 +87,23 @@
         android:textColor="#C3BCBC"
         android:textColorHint="#D8CECE"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registro_contraseña" />
 
     <Button
         android:id="@+id/boton_crear_usuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="141dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="140dp"
         android:layout_marginBottom="22dp"
         android:backgroundTint="#03A9F4"
         android:text="Crear cuenta"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registro_contraseña_repetir" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

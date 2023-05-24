@@ -28,6 +28,7 @@
         android:id="@+id/usuarioLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="91dp"
         android:layout_marginTop="43dp"
         android:layout_marginEnd="111dp"
         android:ems="10"
@@ -36,12 +37,14 @@
         android:textColor="#C3BCBC"
         android:textColorHint="#D8CECE"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/contraseñaLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
         android:layout_marginTop="39dp"
         android:layout_marginEnd="112dp"
         android:ems="10"
@@ -50,32 +53,39 @@
         android:textColor="#C3BCBC"
         android:textColorHint="#BFBFBF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usuarioLogin" />
 
     <Button
         android:id="@+id/boton_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="138dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="140dp"
         android:backgroundTint="#3F51B5"
         android:text="Iniciar sesión"
+        android:textColor="#FFFFFF"
         android:textColorHighlight="#3F51B5"
         android:textColorLink="#3F51B5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contraseñaLogin" />
 
     <Button
         android:id="@+id/boton_sign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="140dp"
         android:layout_marginBottom="22dp"
         android:backgroundTint="#03A9F4"
         android:text="Crear cuenta"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/boton_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,9 +12,11 @@
         android:layout_height="50dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="236dp"
+        android:layout_marginEnd="64dp"
         android:iconifiedByDefault="false"
         android:queryHint="Buscar"
         android:theme="@style/Theme.Material3.DynamicColors.Dark"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,14 +24,17 @@
         android:id="@+id/boton_eliminacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
         android:layout_marginTop="500dp"
         android:layout_marginEnd="148dp"
         android:backgroundTint="#E80A0A"
         android:text="Eliminar"
+        android:textColor="#FFFFFF"
         android:textColorHighlight="#3F51B5"
         android:textColorLink="#35F1B5"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
