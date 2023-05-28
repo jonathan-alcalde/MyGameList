@@ -9,10 +9,10 @@
 
     <ImageView
         android:id="@+id/imagenJuego"
-        android:layout_width="150dp"
-        android:layout_height="204dp"
+        android:layout_width="167dp"
+        android:layout_height="217dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,11 +29,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/desarrolladoraJuego"
+        android:id="@+id/desarrolladora"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="34dp"
+        android:text="Desarrolladora:"
+        android:textColor="#D8CECE"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imagenJuego"
+        app:layout_constraintTop_toBottomOf="@+id/nombreJuego" />
+
+    <TextView
+        android:id="@+id/desarrolladoraJuego"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="68dp"
         android:text="Desarrollado por: Team Cherry"
         android:textColor="#D8CECE"
         android:textSize="16sp"
@@ -107,11 +119,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginBottom="40dp"
         android:buttonTint="@color/white"
         android:text="Añadir a la lista"
         android:textColor="#D8CECE"
         android:textColorHint="#D8CECE"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/plataformaJuego" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

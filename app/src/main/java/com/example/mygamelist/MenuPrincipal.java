@@ -112,16 +112,14 @@ public class MenuPrincipal extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        //////////////////////////////////////////////FIN DE CONFIGURACION DEL MENU DESPLEGABLE////////////////////////////////////////////////////
 
 
 
 
     }
 
-    public void funcion(){
 
-    }
 
 
     class ImageAdapter extends BaseAdapter {
