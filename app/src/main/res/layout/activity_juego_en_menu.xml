@@ -102,13 +102,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/generoJuego" />
 
-    <TextView
+    <Button
         android:id="@+id/plataformaJuego"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="7dp"
-        android:text="PC, Xbox, Play Station, Switch"
+        android:text="Seleccionar plataforma"
         android:textColor="#D8CECE"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -118,12 +118,29 @@
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="188dp"
+        android:layout_marginBottom="68dp"
         android:buttonTint="@color/white"
         android:text="Añadir a la lista"
         android:textColor="#D8CECE"
         android:textColorHint="#D8CECE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/puntuacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="200dp"
+        android:text="Puntuación:"
+        android:textColor="#D8CECE"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/descripcionJuego"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imagenJuego"
+        app:layout_constraintTop_toBottomOf="@+id/desarrolladoraJuego" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

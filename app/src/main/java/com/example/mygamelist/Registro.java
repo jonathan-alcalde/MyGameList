@@ -13,7 +13,10 @@ import android.widget.EditText;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.security.NoSuchAlgorithmException;
 import java.sql.SQLException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import pojosmygamelist.CADMyGameList;
 import pojosmygamelist.ExcepcionMyGameList;
@@ -78,8 +81,20 @@ public class Registro extends AppCompatActivity {
                         "La contraseña debe de ser igual en ambos casos",
                         BaseTransientBottomBar.LENGTH_SHORT
                 ).show();
-            } else {
+            } else if(!validarCorreoElectronico(registroCorreoString)){
+                Snackbar.make(
+                        findViewById(R.id.activity_registro),
+                        "El correo electrónico no es válido",
+                        BaseTransientBottomBar.LENGTH_SHORT
+                ).show();
 
+            } else if(!verificarContrasenaSegura(registroContraseñaString)){
+                Snackbar.make(
+                        findViewById(R.id.activity_registro),
+                        "La contraseña no es segura",
+                        BaseTransientBottomBar.LENGTH_SHORT
+                ).show();
+            } else{
                 try {
                     u1.setNombre(registroUsuarioString);
                     u1.setCorreoElectronico(registroCorreoString);
@@ -92,6 +107,8 @@ public class Registro extends AppCompatActivity {
                     e.printStackTrace();
                 } catch (SQLException e) {
                     e.printStackTrace();
+                } catch (NoSuchAlgorithmException e) {
+                    throw new RuntimeException(e);
                 }
 
                 if (usuarioCreado == 1) {
@@ -129,4 +146,45 @@ public class Registro extends AppCompatActivity {
         public void setEmail(String email) { this.email = email; }
 
     }
+
+    public static boolean validarCorreoElectronico(String correo) {
+        // Patrón para validar el formato del correo electrónico
+        String patron = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
+        Pattern pattern = Pattern.compile(patron);
+        Matcher matcher = pattern.matcher(correo);
+        return matcher.matches();
+    }
+
+    public static boolean verificarContrasenaSegura(String contrasena) {
+        // Verificar la longitud mínima de la contraseña
+        if (contrasena.length() < 8) {
+            return false;
+        }
+
+        // Verificar la presencia de al menos una letra mayúscula
+        if (!contrasena.matches(".*[A-Z].*")) {
+            return false;
+        }
+
+        // Verificar la presencia de al menos una letra minúscula
+        if (!contrasena.matches(".*[a-z].*")) {
+            return false;
+        }
+
+        // Verificar la presencia de al menos un dígito
+        if (!contrasena.matches(".*\\d.*")) {
+            return false;
+        }
+
+        // Verificar la presencia de al menos un carácter especial
+        if (!contrasena.matches(".*[!@#\\$%\\^&\\*()\\-+=~`{}\\[\\]|\\\\:;\"'<>,.?/].*")) {
+            return false;
+        }
+
+
+
+        // La contraseña cumple con todos los criterios de seguridad
+        return true;
+    }
+
 }

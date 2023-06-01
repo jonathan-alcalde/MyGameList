@@ -6,6 +6,8 @@ import android.os.Bundle;
 
 import java.util.ArrayList;
 
+import pojosmygamelist.Juego;
+
 public class ListaPersonal extends AppCompatActivity {
 
     @Override

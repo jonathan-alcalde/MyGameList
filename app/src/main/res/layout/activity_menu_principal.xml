@@ -46,9 +46,7 @@
                         android:textColorHint="#D7CDCD"
                         android:textSize="24sp" />
 
-                    <SearchView
-                        android:layout_width="171dp"
-                        android:layout_height="match_parent" />
+
 
                 </LinearLayout>
 

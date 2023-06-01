@@ -38,22 +38,19 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="200dp"
-        android:text="Logros:"
+        android:text="Puntuación:"
         android:textColor="#D8CECE"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-    <EditText
-        android:id="@+id/editTextText4"
+    <Spinner
+        android:id="@+id/spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="116dp"
-        android:ems="10"
-        android:inputType="text"
-        android:textColor="#C3BCBC"
-        android:textColorHint="#D8CECE"
+        android:entries="@array/numbers_array"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 

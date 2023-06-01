@@ -14,6 +14,7 @@ import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.io.Serializable;
+import java.security.NoSuchAlgorithmException;
 import java.sql.SQLException;
 
 import pojosmygamelist.CADMyGameList;
@@ -113,7 +114,7 @@ public class Login extends AppCompatActivity {
 
 
             catch (ExcepcionMyGameList e) { e.printStackTrace(); }
-            catch (SQLException e) { e.printStackTrace(); }
+            catch (SQLException | NoSuchAlgorithmException e) { e.printStackTrace(); }
 
             if(u1 != null){
                 System.out.println("usuario logeado correctamente: " + u1.getNombre());
