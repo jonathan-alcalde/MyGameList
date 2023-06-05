@@ -8,15 +8,18 @@
     android:background="#252930">
 
     <SearchView
+        android:id="@+id/barraBusqueda"
         android:layout_width="283dp"
         android:layout_height="50dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="236dp"
+        android:layout_marginTop="232dp"
         android:layout_marginEnd="64dp"
         android:iconifiedByDefault="false"
+        android:background="#7E7A7A"
         android:queryHint="Buscar"
         android:theme="@style/Theme.Material3.DynamicColors.Dark"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -80,7 +80,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="387dp" />
+        tools:layout_editor_absoluteY="387dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/puntuacion"
