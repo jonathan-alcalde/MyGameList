@@ -16,5 +16,7 @@ public class ListaPersonal extends AppCompatActivity {
         setContentView(R.layout.activity_lista_personal);
 
         ArrayList<Juego> juegosDeUsuario = new ArrayList<Juego>();
+
+
     }
 }

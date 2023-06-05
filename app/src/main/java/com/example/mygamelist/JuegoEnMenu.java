@@ -6,10 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -47,7 +43,7 @@ public class JuegoEnMenu extends AppCompatActivity {
         nombreDescripcion = findViewById(R.id.descripcionJuego);
         nombreGenero = findViewById(R.id.generoJuego);
         nombrePlataforma = findViewById(R.id.plataformaJuego);
-        juegopuntuacion = findViewById(R.id.puntuacion);
+        juegopuntuacion = findViewById(R.id.estado);
 
         Intent intent = getIntent();
         juego = (Juego) intent.getSerializableExtra("juegoSeleccionado");

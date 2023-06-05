@@ -67,6 +67,40 @@ public class MenuPrincipal extends AppCompatActivity {
             }
         });
 
+//////////////////////////////////////////////CONFIGURACION DEL MENU DESPLEGABLE////////////////////////////////////////////////////
+
+        //Boton en navegacion para menu principal
+        Button BotonMenuPrincipal = findViewById(R.id.menuPrincipal);
+        BotonMenuPrincipal.setOnClickListener(new View.OnClickListener() {
+
+            //metodo para viajar al registro
+            public void onClick(View v) {
+
+                // Crear un objeto Intent para la actividad de destino
+                Intent intent = new Intent(MenuPrincipal.this, MenuPrincipal.class);
+
+
+
+                // Iniciar la actividad de destino
+                startActivity(intent);
+            }
+        });
+
+        //Boton en navegacion para lista personal
+        Button miLista = findViewById(R.id.miLista);
+        miLista.setOnClickListener(new View.OnClickListener() {
+
+            //metodo para viajar al registro
+            public void onClick(View v) {
+
+                // Crear un objeto Intent para la actividad de destino
+                Intent intent = new Intent(MenuPrincipal.this, ListaPersonal.class);
+
+                // Iniciar la actividad de destino
+                startActivity(intent);
+            }
+        });
+        //////////////////////////////////////////////FIN DE CONFIGURACION DEL MENU DESPLEGABLE////////////////////////////////////////////////////
 
 
     }

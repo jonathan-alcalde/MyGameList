@@ -9,10 +9,14 @@
 
     <ImageView
         android:id="@+id/imagenJuego"
-        android:layout_width="167dp"
-        android:layout_height="217dp"
-        android:layout_marginStart="4dp"
+        android:layout_width="401dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/nombreJuego"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,51 +24,53 @@
         android:id="@+id/nombreJuego"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="56dp"
-        android:text="Hollow Knight"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="188dp"
+        android:text="NombreJuego"
         android:textColor="#D8CECE"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/imagenJuego"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/desarrolladora"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="34dp"
         android:text="Desarrolladora:"
         android:textColor="#D8CECE"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/imagenJuego"
+        app:layout_constraintBottom_toTopOf="@+id/desarrolladoraJuego"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nombreJuego" />
 
     <TextView
         android:id="@+id/desarrolladoraJuego"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="68dp"
-        android:text="Desarrollado por: Team Cherry"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:text="NombreDesarrolladora"
         android:textColor="#D8CECE"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/imagenJuego"
-        app:layout_constraintTop_toBottomOf="@+id/nombreJuego" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desarrolladora" />
 
     <TextView
         android:id="@+id/descripcionJuego"
-        android:layout_width="343dp"
-        android:layout_height="179dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="16dp"
-        android:text="¡Forja tu propio camino en Hollow Knight! Una aventura épica a través de un vasto reino de insectos y héroes que se encuentra en ruinas. Explora cavernas tortuosas, combate contra criaturas corrompidas y entabla amistad con extraños insectos, todo en un estilo clásico en 2D dibujado a mano. "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="15dp"
+        android:text="Descripcion"
         android:textColor="#D8CECE"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/generos"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenJuego" />
+        app:layout_constraintTop_toBottomOf="@+id/desarrolladoraJuego" />
 
     <TextView
         android:id="@+id/generos"
@@ -84,7 +90,7 @@
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="6dp"
-        android:text="Metroidvania, 2D, Soylslike, indie, Un jugador..."
+        android:text="NombresGeneros"
         android:textColor="#D8CECE"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -128,7 +134,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/puntuacion"
+        android:id="@+id/estado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
