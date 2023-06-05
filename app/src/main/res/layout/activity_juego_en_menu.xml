@@ -5,148 +5,166 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#252930"
-    tools:context=".JuegoEnMenu">
+    tools:context=".JuegoEnMenu"
+    android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imagenJuego"
-        android:layout_width="401dp"
-        android:layout_height="160dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/nombreJuego"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/nombreJuego"
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="188dp"
-        android:text="NombreJuego"
-        android:textColor="#D8CECE"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="26dp">
 
-    <TextView
-        android:id="@+id/desarrolladora"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginBottom="34dp"
-        android:text="Desarrolladora:"
-        android:textColor="#D8CECE"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/desarrolladoraJuego"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreJuego" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/desarrolladoraJuego"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="8dp"
-        android:text="NombreDesarrolladora"
-        android:textColor="#D8CECE"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/desarrolladora" />
+            <ImageView
+                android:id="@+id/imagenJuego"
+                android:layout_width="401dp"
+                android:layout_height="148dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/descripcionJuego"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="15dp"
-        android:text="Descripcion"
-        android:textColor="#D8CECE"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/desarrolladoraJuego" />
+            <Button
+                android:id="@+id/addLista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="125dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:buttonTint="@color/white"
+                android:text="Añadir a la lista"
+                android:textColor="#D8CECE"
+                android:textColorHint="#D8CECE"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/generos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Generos:"
-        android:textColor="#D8CECE"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descripcionJuego" />
+            <TextView
+                android:id="@+id/nombreJuego"
+                android:layout_width="204dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="NombreJuego"
+                android:textColor="#D8CECE"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/generoJuego"
-        android:layout_width="357dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="6dp"
-        android:text="NombresGeneros"
-        android:textColor="#D8CECE"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/generos" />
 
-    <TextView
-        android:id="@+id/plataformas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="21dp"
-        android:text="Plataformas:"
-        android:textColor="#D8CECE"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/generoJuego" />
 
-    <Button
-        android:id="@+id/plataformaJuego"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="7dp"
-        android:text="Seleccionar plataforma"
-        android:textColor="#D8CECE"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/plataformas" />
+            <TextView
+                android:id="@+id/descripcionJuego"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="15dp"
+                android:text="Descripcion"
+                android:textColor="#D8CECE"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/desarrolladoraJuego" />
+            <TextView
+                android:id="@+id/estado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="2dp"
+                android:text="Puntuación:"
+                android:textColor="#D8CECE"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/descripcionJuego"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imagenJuego"
+                app:layout_constraintTop_toBottomOf="@+id/desarrolladoraJuego" />
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="188dp"
-        android:layout_marginBottom="68dp"
-        android:buttonTint="@color/white"
-        android:text="Añadir a la lista"
-        android:textColor="#D8CECE"
-        android:textColorHint="#D8CECE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/desarrolladora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="34dp"
+                android:text="Desarrolladora:"
+                android:textColor="#D8CECE"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/desarrolladoraJuego"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nombreJuego" />
 
-    <TextView
-        android:id="@+id/estado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginBottom="200dp"
-        android:text="Puntuación:"
-        android:textColor="#D8CECE"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/descripcionJuego"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imagenJuego"
-        app:layout_constraintTop_toBottomOf="@+id/desarrolladoraJuego" />
+            <TextView
+                android:id="@+id/desarrolladoraJuego"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:text="NombreDesarrolladora"
+                android:textColor="#D8CECE"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/desarrolladora" />
+            <TextView
+                android:id="@+id/generos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Generos:"
+                android:textColor="#D8CECE"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descripcionJuego" />
+
+            <TextView
+                android:id="@+id/generoJuego"
+                android:layout_width="357dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:text="NombresGeneros"
+                android:textColor="#D8CECE"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/generos" />
+
+            <TextView
+                android:id="@+id/plataformas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="21dp"
+                android:text="Plataformas:"
+                android:textColor="#D8CECE"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/generoJuego" />
+
+            <Button
+                android:id="@+id/plataformaJuego"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="7dp"
+                android:text="Seleccionar plataforma"
+                android:textColor="#D8CECE"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/plataformas" />
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
