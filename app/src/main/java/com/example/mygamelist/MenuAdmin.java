@@ -33,28 +33,39 @@ public class MenuAdmin extends AppCompatActivity {
         });
     }
 
-    private class GetRecordInfoTask extends AsyncTask<String, Void, Void> {
+    private class GetRecordInfoTask extends AsyncTask<String, Void, Boolean> {
+        private String nombreUsuarioInput;
+
         @Override
-        protected Void doInBackground(String... params) {
+        protected Boolean doInBackground(String... params) {
             try {
                 CADMyGameList cad = new CADMyGameList();
                 EditText nombreUsuario = findViewById(R.id.nombreUsuario);
-                String nombre = nombreUsuario.getText().toString();
-                cad.eliminarUsuarioPorNombre(nombre);
-            } catch (ExcepcionMyGameList | SQLException e) {
+                nombreUsuarioInput = nombreUsuario.getText().toString();
+                return cad.eliminarUsuarioPorNombre(nombreUsuarioInput);
+            } catch (ExcepcionMyGameList e) {
                 e.printStackTrace();
+                return false;
             }
-
-            return null;
         }
 
         @Override
-        protected void onPostExecute(Void aVoid) {
-            Snackbar.make(
-                    findViewById(R.id.activity_menu_admin),
-                    "Usuario eliminado correctamente",
-                    BaseTransientBottomBar.LENGTH_SHORT
-            ).show();
+        protected void onPostExecute(Boolean success) {
+            if (success) {
+                Snackbar.make(
+                        findViewById(R.id.activity_menu_admin),
+                        "Usuario " + nombreUsuarioInput +" eliminado correctamente",
+                        BaseTransientBottomBar.LENGTH_SHORT
+                ).show();
+            } else {
+                Snackbar.make(
+                        findViewById(R.id.activity_menu_admin),
+                        "El usuario " + nombreUsuarioInput +" no existe",
+                        BaseTransientBottomBar.LENGTH_SHORT
+                ).show();
+                EditText nombreUsuario = findViewById(R.id.nombreUsuario);
+                nombreUsuario.setText(nombreUsuarioInput);
+            }
         }
     }
 }
