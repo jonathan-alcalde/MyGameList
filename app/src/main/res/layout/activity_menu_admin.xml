@@ -2,26 +2,28 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_menu_admin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MenuAdmin"
     android:background="#252930">
 
-    <SearchView
-        android:id="@+id/barraBusqueda"
-        android:layout_width="283dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="232dp"
-        android:layout_marginEnd="64dp"
-        android:iconifiedByDefault="false"
-        android:background="#7E7A7A"
-        android:queryHint="Buscar"
-        android:theme="@style/Theme.Material3.DynamicColors.Dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <SearchView-->
+<!--        android:id="@+id/barraBusqueda"-->
+<!--        android:layout_width="283dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginStart="64dp"-->
+<!--        android:layout_marginTop="232dp"-->
+<!--        android:layout_marginEnd="64dp"-->
+<!--        android:iconifiedByDefault="false"-->
+<!--        android:background="#7E7A7A"-->
+<!--        android:queryHint="Buscar"-->
+
+<!--        android:theme="@style/Theme.Material3.DynamicColors.Dark"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <Button
         android:id="@+id/boton_eliminacion"
@@ -68,6 +70,25 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nombreUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="180dp"
+        android:ems="10"
+        android:hint="Nombre "
+        android:inputType="text"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#D8CECE"
+        app:layout_constraintBottom_toTopOf="@+id/boton_eliminacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barraBusqueda" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

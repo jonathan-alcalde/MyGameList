@@ -88,7 +88,7 @@ public class Login extends AppCompatActivity {
 
     }
 
-    private class GetRecordInfoTask extends AsyncTask<String, Void, RecordInfo> {
+    class GetRecordInfoTask extends AsyncTask<String, Void, RecordInfo> {
         @Override protected RecordInfo doInBackground(String... params) {
             System.out.println("Entro en el hilo mundo!");
             RecordInfo recordInfo = new RecordInfo();
@@ -152,7 +152,7 @@ public class Login extends AppCompatActivity {
             System.out.println("HE ACABADO OK EN EL LOGIN");
         }
     }
-    private static class RecordInfo {
+    static class RecordInfo {
 
         private int id;
         private String name;
