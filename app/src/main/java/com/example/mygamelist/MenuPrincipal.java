@@ -84,6 +84,14 @@ public class MenuPrincipal extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button editarUsuario = findViewById(R.id.datosUsuario);
+        editarUsuario.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuPrincipal.this, EditarUsuario.class);
+                startActivity(intent);
+            }
+        });
     }
 
     class ImageAdapter extends BaseAdapter {

@@ -17,6 +17,9 @@
         android:theme="@style/Theme.MyGameList"
         tools:targetApi="31">
         <activity
+            android:name=".EditarUsuario"
+            android:exported="false" />
+        <activity
             android:name=".JuegoEnListaPersonal"
             android:exported="false" />
         <activity
