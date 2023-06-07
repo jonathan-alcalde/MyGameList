@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditarUsuario"
+    android:id="@+id/activity_editar_usuario"
+    android:background="#252930">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/nombreUsuario"
+                android:layout_width="278dp"
+                android:layout_height="22dp"
+                android:text="Nombre de Usuario"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="12dp" />
+
+            <EditText
+                android:id="@+id/editNombreUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:inputType="text"
+                android:text="Name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.333"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nombreUsuario" />
+
+            <TextView
+                android:id="@+id/contrasena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contraseña"
+                tools:layout_editor_absoluteX="55dp"
+                tools:layout_editor_absoluteY="135dp" />
+
+            <EditText
+                android:id="@+id/contraActual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Contraseña Actual"
+                android:inputType="textPassword"
+                tools:layout_editor_absoluteX="55dp"
+                tools:layout_editor_absoluteY="167dp" />
+
+            <EditText
+                android:id="@+id/nuevaContra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Nueva Contraseña"
+                android:inputType="textPassword"
+                tools:layout_editor_absoluteX="36dp"
+                tools:layout_editor_absoluteY="231dp" />
+
+            <EditText
+                android:id="@+id/nuevaContraConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Confirmar Nueva Contraseña"
+                android:inputType="textPassword"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="307dp" />
+
+            <TextView
+                android:id="@+id/emailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Corre Electronico"
+                tools:layout_editor_absoluteX="79dp"
+                tools:layout_editor_absoluteY="385dp" />
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:text="Name"
+                tools:layout_editor_absoluteX="48dp"
+                tools:layout_editor_absoluteY="453dp" />
+
+            <Button
+                android:id="@+id/actualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Actualizar Cuenta"
+                tools:layout_editor_absoluteX="225dp"
+                tools:layout_editor_absoluteY="552dp" />
+
+            <Button
+                android:id="@+id/eliminarbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eliminar Cuenta"
+                tools:layout_editor_absoluteX="48dp"
+                tools:layout_editor_absoluteY="550dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
