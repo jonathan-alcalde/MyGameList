@@ -26,13 +26,13 @@ import pojosmygamelist.Usuario;
 //import pojosmygamelist.Usuario;
 
 public class Login extends AppCompatActivity {
+    UserSingleton singleton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-
+        singleton = UserSingleton.getInstance(); // Inicializar singleton
 
         Button botonRegistrar = findViewById(R.id.boton_sign);
         Button botonLogin = findViewById(R.id.boton_login);
@@ -51,40 +51,19 @@ public class Login extends AppCompatActivity {
 
 
         botonLogin.setOnClickListener(new View.OnClickListener() {
-
-
-
-            //metodo para viajar al menu principal
+            @Override
             public void onClick(View v) {
-                new GetRecordInfoTask().execute();
-                System.out.println("Entro en el hilo mundo!");
-                //try {
-                //    CADMyGameList cad = new CADMyGameList();
+                EditText loginusuario = findViewById(R.id.usuarioLogin);
+                EditText logincontraseña = findViewById(R.id.contraseñaLogin);
 
-                //   Usuario usuario = null;
+                String usuario = loginusuario.getText().toString();
+                String contraseña = logincontraseña.getText().toString();
 
-
-                //    EditText loginusuario = (EditText) findViewById(R.id.usuarioLogin);
-                //   EditText logincontraseña = (EditText) findViewById(R.id.usuarioLogin);
-                //    System.out.println("loginusuario: " + loginusuario);
-                //    System.out.println("logincontraseña: " + logincontraseña);
-                //    usuario = cad.login(loginusuario.getText().toString(), logincontraseña.getText().toString());
-                //    System.out.println("los datos del usuario son: " + loginusuario);
-                   //if(usuario != null){
-                         //Crear un objeto Intent para la actividad de destino
-                   //     Intent intent = new Intent(Login.this, MenuPrincipal.class);
-
-                         //Iniciar la actividad de destino
-                   //     startActivity(intent);
-                   // }
-
-                //} catch (ExcepcionMyGameList | SQLException e) {
-                //    Toast.makeText(getApplicationContext(), "Usuario no encontrado", Toast.LENGTH_SHORT).show();
-                //  throw new RuntimeException(e);
-               //}
-
+                // Aquí debes llamar a la tarea asíncrona pasando los parámetros necesarios
+                new GetRecordInfoTask().execute(usuario, contraseña);
             }
         });
+
 
     }
 
@@ -107,7 +86,7 @@ public class Login extends AppCompatActivity {
                u1.setNombre(loginusuario.getText().toString());
                u1.setContrasena(logincontraseña.getText().toString());
                u1 =  cad.login(u1.getNombre(),u1.getContrasena());
-               UserSingleton.usuario = u1;
+               singleton.setUsuario(u1);
 
 
            }

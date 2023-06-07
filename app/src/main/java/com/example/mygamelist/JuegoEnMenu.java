@@ -154,7 +154,7 @@ public class JuegoEnMenu extends AppCompatActivity {
                 Snackbar.make(view, "La lista se ha insertado correctamente", Snackbar.LENGTH_SHORT).show();
             } else {
                 // Acción fallida: Mostrar un mensaje de error o realizar alguna acción apropiada
-                Snackbar.make(view, "Error al insertar la lista", Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(view, "El juego ya se encuentra en la lista", Snackbar.LENGTH_SHORT).show();
             }
         }
     }
