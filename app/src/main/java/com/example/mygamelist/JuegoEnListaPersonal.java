@@ -40,9 +40,9 @@ public class JuegoEnListaPersonal extends AppCompatActivity {
         setContentView(R.layout.activity_juego_listapersonal);
         imagenJuego = findViewById(R.id.imagenJuego);
         nombreJuego = findViewById(R.id.nombreJuego);
-        estadoEditText = findViewById(R.id.editEstado);
-        horasjugadasText =findViewById(R.id.editHorasJugadas);
-        puntuacionText = findViewById(R.id.editPuntuacion);
+        estadoEditText = (EditText)findViewById(R.id.editEstado);
+        horasjugadasText = (EditText)findViewById(R.id.editHorasJugadas);
+        puntuacionText = (EditText) findViewById(R.id.editPuntuacion);
         eliminarLista = findViewById(R.id.eliminarLista);
         actualizarLista = findViewById(R.id.actualizarLista);
 
@@ -53,9 +53,15 @@ public class JuegoEnListaPersonal extends AppCompatActivity {
         // Cargar la imagen desde la URL utilizando Picasso
         Picasso.get().load(lista.getImagen()).into(imagenJuego);
 
-        estadoEditText.setText(lista.getEstado());
-        horasjugadasText.setText(Integer.parseInt(String.valueOf(lista.getHorasJugadas())));
-        puntuacionText.setText(Integer.parseInt(String.valueOf(lista.getPuntuacion())));
+        estadoEditText.setText(String.valueOf(lista.getEstado()), TextView.BufferType.EDITABLE);
+
+            horasjugadasText.setText(String.valueOf(lista.getHorasJugadas()), TextView.BufferType.EDITABLE);
+
+
+
+            puntuacionText.setText(String.valueOf(lista.getPuntuacion()), TextView.BufferType.EDITABLE);
+
+
 
         eliminarLista.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -128,8 +134,11 @@ public class JuegoEnListaPersonal extends AppCompatActivity {
                 // el juego seleccionado
                 Lista lista = (Lista) getIntent().getSerializableExtra("juegoSeleccionado");
                 lista.setEstado(estadoEditText.getText().toString());
+                System.out.println("Estado " + estadoEditText.getText().toString());
                 lista.setHorasJugadas(Integer.parseInt(horasjugadasText.getText().toString()));
+                System.out.println("Horas jugadas " + horasjugadasText.getText().toString());
                 lista.setPuntuacion(Integer.parseInt(puntuacionText.getText().toString()));
+                System.out.println("Puntuacion " + puntuacionText.getText().toString());
 
 
                 // Eliminar la lista en la base de datos

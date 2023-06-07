@@ -63,11 +63,12 @@
 
             <EditText
                 android:id="@+id/editEstado"
-                android:layout_width="170dp"
-                android:layout_height="22dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:ems="10"
+                android:textColor="#D8CECE"
                 android:inputType="text"
                 app:layout_constraintBottom_toTopOf="@+id/horasJugadas"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -95,6 +96,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:ems="10"
+                android:textColor="#D8CECE"
                 android:inputType="number"
                 app:layout_constraintBottom_toTopOf="@+id/actualizarLista"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -123,6 +125,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:ems="10"
+                android:textColor="#D8CECE"
                 android:inputType="number"
                 app:layout_constraintBottom_toTopOf="@+id/puntuacion"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -130,7 +133,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/horasJugadas"
                 app:layout_constraintVertical_bias="0.0" />
-            
+
 
             <Button
                 android:id="@+id/actualizarLista"
