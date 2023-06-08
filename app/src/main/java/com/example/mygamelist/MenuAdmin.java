@@ -20,7 +20,6 @@ import java.util.ArrayList;
 
 import pojosmygamelist.CADMyGameList;
 import pojosmygamelist.ExcepcionMyGameList;
-import pojosmygamelist.Usuario;
 
 public class MenuAdmin extends AppCompatActivity {
     AutoCompleteTextView auto;
@@ -43,28 +42,24 @@ public class MenuAdmin extends AppCompatActivity {
         Button botonEliminar = findViewById(R.id.boton_eliminacion);
         botonEliminar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                EliminarUsuario eliminarUsuario = new EliminarUsuario();
-                eliminarUsuario.execute();
+                new GetRecordInfoTask().execute();
             }
         });
     }
 
-    private class EliminarUsuario extends AsyncTask<String, Void, Boolean> {
+    private class GetRecordInfoTask extends AsyncTask<String, Void, Boolean> {
         private String nombreUsuarioInput;
 
         @Override
         protected Boolean doInBackground(String... params) {
             try {
-                nombreUsuarioInput = auto.getText().toString();
-                Usuario usuario = cad.obtenerNombreUsuario(nombreUsuarioInput);
-                cad.eliminarListaDeUsuario(usuario.getId());
+                EditText nombreUsuario = findViewById(R.id.nombreUsuario);
+                nombreUsuarioInput = nombreUsuario.getText().toString();
                 cad.eliminarUsuarioPorNombre(nombreUsuarioInput);
                 return true;
             } catch (ExcepcionMyGameList e) {
                 e.printStackTrace();
                 return false;
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
             }
         }
 
