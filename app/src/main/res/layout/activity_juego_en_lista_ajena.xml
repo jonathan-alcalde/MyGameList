@@ -21,15 +21,15 @@
 
             <ImageView
                 android:id="@+id/imagenJuego"
-                android:layout_width="404dp"
-                android:layout_height="154dp"
+                android:layout_width="390dp"
+                android:layout_height="150dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="8dp" />
 
             <TextView
                 android:id="@+id/nombreJuego"
-                android:layout_width="wrap_content"
+                android:layout_width="374dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="10dp"
@@ -62,11 +62,12 @@
 
             <TextView
                 android:id="@+id/editEstado"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="24dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="374dp"
                 android:textColor="#D8CECE"
+                android:layout_marginStart="16dp"
                 app:layout_constraintBottom_toTopOf="@+id/horasJugadas"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.062"
@@ -81,6 +82,7 @@
                 android:text="Horas jugadas:"
                 android:textColor="#D8CECE"
                 android:textSize="16sp"
+                android:layout_marginStart="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.049"
                 app:layout_constraintStart_toStartOf="parent"
@@ -94,6 +96,7 @@
                 android:layout_marginBottom="10dp"
                 android:ems="10"
                 android:textColor="#D8CECE"
+                android:layout_marginStart="16dp"
                 app:layout_constraintBottom_toTopOf="@+id/actualizarLista"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.079"
@@ -122,6 +125,7 @@
                 android:layout_marginBottom="12dp"
                 android:ems="10"
                 android:textColor="#D8CECE"
+                android:layout_marginStart="16dp"
                 app:layout_constraintBottom_toTopOf="@+id/puntuacion"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.074"

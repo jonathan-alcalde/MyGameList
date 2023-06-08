@@ -21,15 +21,16 @@
 
             <ImageView
                 android:id="@+id/imagenJuego"
-                android:layout_width="404dp"
+                android:layout_width="396dp"
                 android:layout_height="154dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="8dp" />
 
+
             <TextView
                 android:id="@+id/nombreJuego"
-                android:layout_width="wrap_content"
+                android:layout_width="366dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="10dp"
@@ -41,7 +42,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
 
             <TextView
                 android:id="@+id/estado"
@@ -68,6 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:layout_marginStart="16dp"
                 android:textColor="#D8CECE"
                 android:inputType="text"
                 app:layout_constraintBottom_toTopOf="@+id/horasJugadas"
@@ -84,6 +85,7 @@
                 android:text="Horas jugadas:"
                 android:textColor="#D8CECE"
                 android:textSize="16sp"
+                android:layout_marginStart="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.049"
                 app:layout_constraintStart_toStartOf="parent"
@@ -98,6 +100,7 @@
                 android:ems="10"
                 android:textColor="#D8CECE"
                 android:inputType="number"
+                android:layout_marginStart="16dp"
                 app:layout_constraintBottom_toTopOf="@+id/actualizarLista"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.079"
@@ -126,6 +129,7 @@
                 android:layout_marginBottom="12dp"
                 android:ems="10"
                 android:textColor="#D8CECE"
+                android:layout_marginStart="16dp"
                 android:inputType="number"
                 app:layout_constraintBottom_toTopOf="@+id/puntuacion"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -141,6 +145,7 @@
                 android:layout_height="56dp"
                 android:text="Actualizar Lista"
                 android:backgroundTint="#03A9F4"
+                android:layout_marginStart="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -151,6 +156,7 @@
                 android:layout_width="215dp"
                 android:layout_height="56dp"
                 android:text="Eliminar de la Lista"
+                android:layout_marginStart="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

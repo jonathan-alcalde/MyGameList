@@ -23,22 +23,26 @@
                 android:id="@+id/nombreUsuario"
                 android:layout_width="278dp"
                 android:layout_height="22dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="16dp"
                 android:text="Nombre de Usuario"
                 android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+
                 tools:layout_editor_absoluteY="12dp" />
 
             <EditText
                 android:id="@+id/editNombreUsuario"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_width="278dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="0dp"
                 android:ems="10"
                 android:inputType="text"
                 android:text="Name"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#ACA8A8"
+                android:layout_marginStart="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.333"
                 app:layout_constraintStart_toStartOf="parent"
@@ -49,6 +53,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Contraseña"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
                 android:textColor="#FFFFFF"
                 tools:layout_editor_absoluteX="55dp"
                 tools:layout_editor_absoluteY="135dp" />
@@ -60,6 +66,8 @@
                 android:ems="10"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#ACA8A8"
+                android:layout_marginStart="16dp"
+
                 android:hint="Contraseña Actual"
                 android:inputType="textPassword"
                 tools:layout_editor_absoluteX="55dp"
@@ -74,6 +82,7 @@
                 android:hint="Nueva Contraseña"
                 android:textColorHint="#ACA8A8"
                 android:inputType="textPassword"
+                android:layout_marginStart="16dp"
                 tools:layout_editor_absoluteX="36dp"
                 tools:layout_editor_absoluteY="231dp" />
 
@@ -86,14 +95,17 @@
                 android:textColorHint="#ACA8A8"
                 android:hint="Confirmar Nueva Contraseña"
                 android:inputType="textPassword"
+                android:layout_marginStart="16dp"
                 tools:layout_editor_absoluteX="34dp"
                 tools:layout_editor_absoluteY="307dp" />
 
             <TextView
+                android:layout_marginTop="16dp"
                 android:id="@+id/emailText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Corre Electronico"
+                android:text="Correo Electronico"
+                android:layout_marginStart="16dp"
                 android:textColor="#FFFFFF"
                 tools:layout_editor_absoluteX="79dp"
                 tools:layout_editor_absoluteY="385dp" />
@@ -106,7 +118,7 @@
                 android:textColorHint="#ACA8A8"
                 android:textColor="#FFFFFF"
                 android:inputType="text"
-                android:text="Name"
+                android:layout_marginStart="16dp"
                 tools:layout_editor_absoluteX="48dp"
                 tools:layout_editor_absoluteY="453dp" />
 
@@ -117,14 +129,16 @@
                 android:text="Actualizar Cuenta"
                 android:backgroundTint="#03A9F4"
                 tools:layout_editor_absoluteX="225dp"
+                android:layout_marginStart="16dp"
                 tools:layout_editor_absoluteY="552dp" />
 
             <Button
                 android:id="@+id/eliminarUsuario"
-                android:layout_width="wrap_content"
+                android:layout_width="162dp"
                 android:layout_height="wrap_content"
-                android:text="Eliminar Cuenta"
+                android:layout_marginStart="16dp"
                 android:backgroundTint="#FF0000"
+                android:text="Eliminar Cuenta"
                 tools:layout_editor_absoluteX="48dp"
                 tools:layout_editor_absoluteY="550dp" />
 
