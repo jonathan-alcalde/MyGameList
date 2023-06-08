@@ -90,6 +90,9 @@ public class JuegoEnListaPersonal extends AppCompatActivity {
                 }
             }
         });
+
+
+
     }
 
     private class EliminarListaTask extends AsyncTask<Void, Void, Boolean> {

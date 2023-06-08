@@ -8,12 +8,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.squareup.picasso.Picasso;
 
 import java.sql.SQLException;
@@ -28,9 +31,11 @@ import pojosmygamelist.Lista;
 public class ListaPersonal extends AppCompatActivity {
 
     private GridView gridView;
+    private TextView usuarioLogeado;
     private ImageAdapter adapter;
 
     private ArrayList<Lista> listapersonal;
+    private UserSingleton userSingleton;
     UserSingleton singleton = UserSingleton.getInstance();
 
     @Override
@@ -55,6 +60,41 @@ public class ListaPersonal extends AppCompatActivity {
                     intent.putExtra("juegoSeleccionado", lista);
                     startActivity(intent);
                 }
+            }
+        });
+
+        // Configuración del menú desplegable
+        usuarioLogeado = findViewById(R.id.usuario_logeado);
+        userSingleton = UserSingleton.getInstance(); // Obtener la instancia del UserSingleton
+        usuarioLogeado.setText(userSingleton.getUsuario().getNombre());
+        Button botonMenuPrincipal = findViewById(R.id.menuPrincipal);
+        botonMenuPrincipal.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(ListaPersonal.this, MenuPrincipal.class);
+                startActivity(intent);
+            }
+        });
+
+        Button miLista = findViewById(R.id.miLista);
+        miLista.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Snackbar.make(v, "Ya te encuentras en tu lista", Snackbar.LENGTH_LONG).show();
+            }
+        });
+
+        Button editarUsuario = findViewById(R.id.datosUsuario);
+        editarUsuario.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(ListaPersonal.this, EditarUsuario.class);
+                startActivity(intent);
+            }
+        });
+
+        Button cerrarSesion = findViewById(R.id.cerrarSesion);
+        cerrarSesion.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(ListaPersonal.this, Login.class);
+                startActivity(intent);
             }
         });
 

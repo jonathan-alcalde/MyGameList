@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -44,5 +46,8 @@ public class JuegoEnListaAjena extends AppCompatActivity {
 
         horasjugadasText.setText(String.valueOf(lista.getHorasJugadas()), TextView.BufferType.EDITABLE);
         puntuacionText.setText(String.valueOf(lista.getPuntuacion()), TextView.BufferType.EDITABLE);
+
+
+
     }
 }

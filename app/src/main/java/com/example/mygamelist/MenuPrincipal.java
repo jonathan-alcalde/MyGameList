@@ -94,8 +94,7 @@ public class MenuPrincipal extends AppCompatActivity {
         Button botonMenuPrincipal = findViewById(R.id.menuPrincipal);
         botonMenuPrincipal.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(MenuPrincipal.this, MenuPrincipal.class);
-                startActivity(intent);
+                Snackbar.make(v, "Ya te encuentras en el menu principal", Snackbar.LENGTH_LONG).show();
             }
         });
 
