@@ -92,6 +92,14 @@ public class MenuPrincipal extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button cerrarSesion = findViewById(R.id.cerrarSesion);
+        cerrarSesion.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuPrincipal.this, Login.class);
+                startActivity(intent);
+            }
+        });
     }
 
     class ImageAdapter extends BaseAdapter {

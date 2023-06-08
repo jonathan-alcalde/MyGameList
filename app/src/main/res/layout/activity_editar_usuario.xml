@@ -98,7 +98,7 @@
                 tools:layout_editor_absoluteY="453dp" />
 
             <Button
-                android:id="@+id/actualizar"
+                android:id="@+id/actualizarUsuario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Actualizar Cuenta"
@@ -106,7 +106,7 @@
                 tools:layout_editor_absoluteY="552dp" />
 
             <Button
-                android:id="@+id/eliminarbutton"
+                android:id="@+id/eliminarUsuario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Eliminar Cuenta"
