@@ -73,7 +73,7 @@ public class MenuAdmin extends AppCompatActivity {
             if (success) {
                 Snackbar.make(
                         findViewById(R.id.activity_menu_admin),
-                        "Usuario " + nombreUsuarioInput + " eliminado correctamente.",
+                        "Usuario " + nombreUsuarioInput + " eliminado correctamente",
                         BaseTransientBottomBar.LENGTH_SHORT
                 ).show();
                 Intent intent = new Intent(MenuAdmin.this, MenuAdmin.class);
@@ -81,7 +81,7 @@ public class MenuAdmin extends AppCompatActivity {
             } else {
                 Snackbar.make(
                         findViewById(R.id.activity_menu_admin),
-                        "El usuario " + nombreUsuarioInput + " no existe.",
+                        "El usuario " + nombreUsuarioInput + " no existe",
                         BaseTransientBottomBar.LENGTH_SHORT
                 ).show();
                 EditText nombreUsuario = findViewById(R.id.nombreUsuario);
