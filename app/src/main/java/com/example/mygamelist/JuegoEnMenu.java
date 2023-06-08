@@ -151,7 +151,7 @@ public class JuegoEnMenu extends AppCompatActivity {
             View view = findViewById(android.R.id.content);
             if (success) {
                 // Acción exitosa: Actualizar la interfaz de usuario o mostrar un mensaje
-                Snackbar.make(view, "La lista se ha insertado correctamente", Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(view,  "El juego se ha añadido correctamente a tu lista", Snackbar.LENGTH_SHORT).show();
             } else {
                 // Acción fallida: Mostrar un mensaje de error o realizar alguna acción apropiada
                 Snackbar.make(view, "El juego ya se encuentra en la lista", Snackbar.LENGTH_SHORT).show();

@@ -50,6 +50,7 @@ public class JuegoEnListaPersonal extends AppCompatActivity {
         Intent intent = getIntent();
         lista = (Lista) intent.getSerializableExtra("juegoSeleccionado");
 
+        nombreJuego.setText(lista.getNombreJuego());
         // Cargar la imagen desde la URL utilizando Picasso
         Picasso.get().load(lista.getImagen()).into(imagenJuego);
         if(lista.getEstado() == null){
@@ -163,6 +164,8 @@ public class JuegoEnListaPersonal extends AppCompatActivity {
             if (success) {
                 // Acción exitosa: Actualizar la interfaz de usuario o mostrar un mensaje
                 Snackbar.make(view, "La lista se ha actualizado correctamente", Snackbar.LENGTH_SHORT).show();
+                Intent intent = new Intent(JuegoEnListaPersonal.this, ListaPersonal.class);
+                startActivity(intent);
             } else {
                 // Acción fallida: Mostrar un mensaje de error o realizar alguna acción apropiada
                 Snackbar.make(view, "Error al actualizar la lista", Snackbar.LENGTH_SHORT).show();

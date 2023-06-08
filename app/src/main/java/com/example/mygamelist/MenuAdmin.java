@@ -3,6 +3,7 @@ package com.example.mygamelist;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -54,7 +55,8 @@ public class MenuAdmin extends AppCompatActivity {
             try {
                 EditText nombreUsuario = findViewById(R.id.nombreUsuario);
                 nombreUsuarioInput = nombreUsuario.getText().toString();
-                return cad.eliminarUsuarioPorNombre(nombreUsuarioInput);
+                cad.eliminarUsuarioPorNombre(nombreUsuarioInput);
+                return true;
             } catch (ExcepcionMyGameList e) {
                 e.printStackTrace();
                 return false;
@@ -69,6 +71,8 @@ public class MenuAdmin extends AppCompatActivity {
                         "Usuario " + nombreUsuarioInput + " eliminado correctamente",
                         BaseTransientBottomBar.LENGTH_SHORT
                 ).show();
+                Intent intent = new Intent(MenuAdmin.this, MenuAdmin.class);
+                startActivity(intent);
             } else {
                 Snackbar.make(
                         findViewById(R.id.activity_menu_admin),

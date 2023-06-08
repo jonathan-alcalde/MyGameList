@@ -50,9 +50,7 @@ private UserSingleton userSingleton = UserSingleton.getInstance(); // Obtener la
                 // Crear y ejecutar el hilo en segundo plano
                 EliminarUsuarioTask hilo = new EliminarUsuarioTask();
                 hilo.execute();
-                //Crear un objeto Intent para la actividad de destino
-                Intent intent = new Intent(EditarUsuario.this, Login.class);
-                startActivity(intent);
+
             }
         });
         Button actualizar = (Button) findViewById(R.id.actualizarUsuario);
@@ -92,6 +90,9 @@ private UserSingleton userSingleton = UserSingleton.getInstance(); // Obtener la
             if (success) {
                 // Acción exitosa: Actualizar la interfaz de usuario o mostrar un mensaje
                 Snackbar.make(view, "El usuario se ha eliminado correctamente", Snackbar.LENGTH_SHORT).show();
+                //Crear un objeto Intent para la actividad de destino
+                Intent intent = new Intent(EditarUsuario.this, Login.class);
+                startActivity(intent);
             } else {
                 // Acción fallida: Mostrar un mensaje de error o realizar alguna acción apropiada
                 Snackbar.make(view, "Error al eliminar el usuario", Snackbar.LENGTH_SHORT).show();

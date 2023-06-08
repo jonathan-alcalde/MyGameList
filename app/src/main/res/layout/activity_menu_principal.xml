@@ -57,10 +57,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textColorHint="#ACA8A8"
+                        android:hint="Buscar lista de Usuario"
                         android:textColor="#FFFFFF"
                         android:ems="10"
-                        android:inputType="text"
-                        android:hint="Buscar Usuario" />
+                        android:inputType="text" />
 
 
                 </LinearLayout>
@@ -116,17 +117,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
-                    android:backgroundTint="#3F51B5"
                     android:text="Menú General"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#03A9F4"/>
 
                 <Button
                     android:id="@+id/miLista"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
-                    android:backgroundTint="#3F51B5"
                     android:text="Mi lista"
+                    android:backgroundTint="#03A9F4"
                     android:textColor="#FFFFFF" />
 
                 <Button
@@ -134,15 +135,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
-                    android:backgroundTint="#3F51B5"
+                    android:backgroundTint="#03A9F4"
                     android:text="Editar datos de usuario"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"/>
                 <Button
                     android:id="@+id/cerrarSesion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
-                    android:backgroundTint="#3F51B5"
+                    android:backgroundTint="#FF0000"
                     android:text="Cerrar Sesión"
                     android:textColor="#FFFFFF" />
 

@@ -38,6 +38,7 @@
                 android:inputType="text"
                 android:text="Name"
                 android:textColor="#FFFFFF"
+                android:textColorHint="#ACA8A8"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.333"
                 app:layout_constraintStart_toStartOf="parent"
@@ -58,6 +59,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:textColor="#FFFFFF"
+                android:textColorHint="#ACA8A8"
                 android:hint="Contraseña Actual"
                 android:inputType="textPassword"
                 tools:layout_editor_absoluteX="55dp"
@@ -70,6 +72,7 @@
                 android:ems="10"
                 android:textColor="#FFFFFF"
                 android:hint="Nueva Contraseña"
+                android:textColorHint="#ACA8A8"
                 android:inputType="textPassword"
                 tools:layout_editor_absoluteX="36dp"
                 tools:layout_editor_absoluteY="231dp" />
@@ -80,6 +83,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:textColor="#FFFFFF"
+                android:textColorHint="#ACA8A8"
                 android:hint="Confirmar Nueva Contraseña"
                 android:inputType="textPassword"
                 tools:layout_editor_absoluteX="34dp"
@@ -99,6 +103,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:textColorHint="#ACA8A8"
                 android:textColor="#FFFFFF"
                 android:inputType="text"
                 android:text="Name"
@@ -110,6 +115,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Actualizar Cuenta"
+                android:backgroundTint="#03A9F4"
                 tools:layout_editor_absoluteX="225dp"
                 tools:layout_editor_absoluteY="552dp" />
 
@@ -118,6 +124,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Eliminar Cuenta"
+                android:backgroundTint="#FF0000"
                 tools:layout_editor_absoluteX="48dp"
                 tools:layout_editor_absoluteY="550dp" />
 
