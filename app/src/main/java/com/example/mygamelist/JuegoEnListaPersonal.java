@@ -52,8 +52,11 @@ public class JuegoEnListaPersonal extends AppCompatActivity {
 
         // Cargar la imagen desde la URL utilizando Picasso
         Picasso.get().load(lista.getImagen()).into(imagenJuego);
-
-        estadoEditText.setText(String.valueOf(lista.getEstado()), TextView.BufferType.EDITABLE);
+        if(lista.getEstado() == null){
+            estadoEditText.setText("No empezado", TextView.BufferType.EDITABLE);
+        }else{
+            estadoEditText.setText(String.valueOf(lista.getEstado()), TextView.BufferType.EDITABLE);
+        }
 
             horasjugadasText.setText(String.valueOf(lista.getHorasJugadas()), TextView.BufferType.EDITABLE);
 
