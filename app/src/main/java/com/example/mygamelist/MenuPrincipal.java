@@ -10,14 +10,17 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.squareup.picasso.Picasso;
 
+import java.security.NoSuchAlgorithmException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -33,16 +36,35 @@ public class MenuPrincipal extends AppCompatActivity {
 
     private ArrayList<Juego> juegos;
     private UserSingleton userSingleton;
-
-    CADMyGameList cad = new CADMyGameList();
-
-    public MenuPrincipal() throws ExcepcionMyGameList {
-    }
+    private ImageView buscar;
+    private EditText textobuscar;
+    private Usuario usuarioencontrado;
+    private CADMyGameList cad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
+
+        try {
+            cad = new CADMyGameList();
+        } catch (ExcepcionMyGameList e) {
+            throw new RuntimeException(e);
+        }
+
+        buscar = findViewById(R.id.buscarUsuario);
+        buscar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                String nombreUsuario = textobuscar.getText().toString();
+                if (!nombreUsuario.isEmpty()) {
+                    ObtenerUsuarioTask hilo = new ObtenerUsuarioTask();
+                    hilo.execute(nombreUsuario);
+                } else {
+                    Snackbar.make(v, "El nombre de usuario está vacío", Snackbar.LENGTH_SHORT).show();
+                }
+            }
+        });
+        textobuscar = findViewById(R.id.textbuscarusuario);
 
         gridView = findViewById(R.id.grid_view);
 
@@ -152,6 +174,36 @@ public class MenuPrincipal extends AppCompatActivity {
         protected void onPostExecute(ArrayList<Juego> juegos) {
             MenuPrincipal.this.juegos = juegos;
             adapter.notifyDataSetChanged();
+        }
+    }
+
+    private class ObtenerUsuarioTask extends AsyncTask<String, Void, Usuario> {
+        private String errores;
+
+        @Override
+        protected Usuario doInBackground(String... params) {
+            String nombreUsuario = textobuscar.getText().toString();
+            try {
+                Usuario usuarioEncontrado = cad.obtenerNombreUsuario(nombreUsuario);
+                return usuarioEncontrado;
+            } catch (ExcepcionMyGameList | SQLException e) {
+                e.printStackTrace();
+                return null;
+            }
+        }
+
+        @Override
+        protected void onPostExecute(Usuario usuarioEncontrado) {
+            View view = findViewById(android.R.id.content);
+            if (usuarioEncontrado != null) {
+                // Acción exitosa: El usuario fue encontrado
+                Intent intent = new Intent(MenuPrincipal.this, ListaAjena.class);
+                intent.putExtra("otrousuario", usuarioEncontrado.getNombre());
+                startActivity(intent);
+            } else {
+                // Acción fallida: El usuario no fue encontrado
+                Snackbar.make(view, "Usuario no encontrado", Snackbar.LENGTH_SHORT).show();
+            }
         }
     }
 }

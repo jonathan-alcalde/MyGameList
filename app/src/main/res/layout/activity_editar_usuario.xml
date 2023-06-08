@@ -24,6 +24,7 @@
                 android:layout_width="278dp"
                 android:layout_height="22dp"
                 android:text="Nombre de Usuario"
+                android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="12dp" />
@@ -36,6 +37,7 @@
                 android:ems="10"
                 android:inputType="text"
                 android:text="Name"
+                android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.333"
                 app:layout_constraintStart_toStartOf="parent"
@@ -46,6 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Contraseña"
+                android:textColor="#FFFFFF"
                 tools:layout_editor_absoluteX="55dp"
                 tools:layout_editor_absoluteY="135dp" />
 
@@ -54,6 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:textColor="#FFFFFF"
                 android:hint="Contraseña Actual"
                 android:inputType="textPassword"
                 tools:layout_editor_absoluteX="55dp"
@@ -64,6 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:textColor="#FFFFFF"
                 android:hint="Nueva Contraseña"
                 android:inputType="textPassword"
                 tools:layout_editor_absoluteX="36dp"
@@ -74,6 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:textColor="#FFFFFF"
                 android:hint="Confirmar Nueva Contraseña"
                 android:inputType="textPassword"
                 tools:layout_editor_absoluteX="34dp"
@@ -84,6 +90,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Corre Electronico"
+                android:textColor="#FFFFFF"
                 tools:layout_editor_absoluteX="79dp"
                 tools:layout_editor_absoluteY="385dp" />
 
@@ -92,6 +99,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:textColor="#FFFFFF"
                 android:inputType="text"
                 android:text="Name"
                 tools:layout_editor_absoluteX="48dp"
